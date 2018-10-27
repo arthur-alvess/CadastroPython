@@ -22,20 +22,20 @@ jogadores_tabela = "\n{:<3}{:<15}{:^10}{:^15}{:^15}{:^15}".format("ID", "NOME", 
 def adicionarJogador():
 	nome = input("\nDigite o nome do Jogador: ")
 	if nome in eSport.keys():
-		print("\nJogador já cadastrdo.")
+		print("\nJogador já cadastrado.")
 		return
 
 	nickname = input("Digite o nickname do Jogador: ")#Nome usado no jogo.
-	campeao = input("Digite seus campeões mais jogados: ")#Personage que você usar no jogo.
+	campeao = input("Digite seus campeões mais jogados: ")#Personagem que você usa no jogo.
 	funcao = input("Digite sua funcao: ")#Qual a posição em que você joga.
-	elo = input("Digite seu elo:")#Sua posição no rank de acordo com a sua habilidade no jogo.
+	elo = input("Digite seu elo:")#Sua posição no ranking de acordo com a sua habilidade no jogo.
 	eSport[nome] = Jogador(nome, nickname, campeao, funcao, elo)
-	print("\nJogador CADASTRADO COM SUCESSO!")
+	print("\nJOGADOR CADASTRADO COM SUCESSO!")
 
 
 def pesquisarJogador():
-	if not eSport:  # Se a lista nao tiver Jogador
-		print("\nNÃO HÁ Jogador CADASTRADO.")
+	if not eSport:  # Se a lista nao tiver jogador...
+		print("\nNÃO HÁ JOGADOR CADASTRADO.")
 
 	else:
 		Jogador_pesquisar = input("\nNome do Jogador: ")
@@ -62,12 +62,12 @@ def excluirJogador():
 		for ID, key in enumerate(eSport.keys()):
 			if ID == Jogador_excluir - 1:
 				del eSport[key]
-				print("\nJogador excluido sucesso.")
+				print("\nJogador excluído sucesso.")
 
 
 def listarJogadors():
-	if not eSport:  # Se a lista nao tiver Jogador
-		print("\nNão há Jogador cadastrdo.")
+	if not eSport:  # Se a lista nao tiver jogador...
+		print("\nNão há Jogador cadastrado.")
 		return False
 
 	else:
